@@ -5,7 +5,6 @@ import * as _ from "lodash";
 import { User } from "./login/user";
 import { Observable } from "rxjs";
 import { environment } from "../../environments/environment";
-import { CookieService } from "ngx-cookie-service";
 
 @Injectable({
   providedIn: "root",

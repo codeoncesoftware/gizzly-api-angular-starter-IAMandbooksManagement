@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/grizzly-api-angular-starter",
+            "outputPath": "dist/grizzly-api-angular-starter-IAMandbooksManagement",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "grizzly-api-angular-starter:build"
+            "browserTarget": "grizzly-api-angular-starter-IAMandbooksManagement:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "grizzly-api-angular-starter:build:production"
+              "browserTarget": "grizzly-api-angular-starter-IAMandbooksManagement:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "grizzly-api-angular-starter:build"
+            "browserTarget": "grizzly-api-angular-starter-IAMandbooksManagement:build"
           }
         },
         "test": {
@@ -115,16 +115,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "grizzly-api-angular-starter:serve"
+            "devServerTarget": "grizzly-api-angular-starter-IAMandbooksManagement:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "grizzly-api-angular-starter:serve:production"
+              "devServerTarget": "grizzly-api-angular-starter-IAMandbooksManagement:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "grizzly-api-angular-starter"
+  "defaultProject": "grizzly-api-angular-starter-IAMandbooksManagement"
 }

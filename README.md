@@ -8,7 +8,7 @@ No SDK to learn, it's full Angular code, have fun !
 
 # Getting started
 
-You can use our [stakblitz](https://stackblitz.com/github/codeoncesoftware/grizzly-api-angular-starter-IAMandBooksManagement) in just one click.
+You can use our [stakblitz](https://stackblitz.com/github/codeoncesoftware/grizzly-api-angular-starter-IAMandbooksManagement) in just one click.
 
 or using [Angular CLI](https://github.com/angular/angular-cli)
 

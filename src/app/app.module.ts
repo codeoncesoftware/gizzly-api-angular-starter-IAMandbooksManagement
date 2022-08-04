@@ -11,7 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './home/home.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AuthModule } from './auth/auth.module';
-import { CookieService } from 'ngx-cookie-service';
 import { BookManagementComponent } from './book-management/book-management.component';
 import { AddBooksComponent } from './book-management/add-books/add-books.component';
 import { EditBooksComponent } from './book-management/edit-books/edit-books.component';
@@ -36,7 +35,7 @@ import { EditBooksComponent } from './book-management/edit-books/edit-books.comp
     FlexLayoutModule,
     CustomMaterialModule,
   ],
-  providers: [CookieService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

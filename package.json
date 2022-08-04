@@ -1,5 +1,5 @@
 {
-  "name": "grizzly-api-angular-starter",
+  "name": "grizzly-api-angular-starter-IAMandbooksManagement",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -32,14 +32,10 @@
     "@ngrx/store-devtools": "^8.0.1",
     "@ngx-translate/core": "~11.0.1",
     "@ngx-translate/http-loader": "~4.0.0",
-    "angular-oauth2-oidc": "^13.0.1",
-    "angularx-social-login": "^3.5.6",
     "bootstrap": "^4.6.0",
     "core-js": "^3.21.0",
     "jwt-decode": "^3.1.2",
     "lodash": "^4.17.21",
-    "ngx-cookie": "^5.0.2",
-    "ngx-cookie-service": "^13.1.2",
     "rxjs": "^7.5.4",
     "rxjs-compat": "^6.6.7",
     "tslib": "^2.3.1",
