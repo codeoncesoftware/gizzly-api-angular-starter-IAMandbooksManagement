@@ -1,0 +1,31 @@
+<!-- Toolbar -->
+<mat-toolbar color="primary" class="app-header">
+  <div>
+    <a [routerLink]="['/home']" class="app-title">
+      <img width=" 40" alt="GrizzlyAPI Logo" src="https://www.grizzly-api.com/assets/images/landing/logo.png" />
+      <span style="vertical-align: super;padding-left: 10px;">Grizzly API Starter </span>
+    </a>
+  </div>
+  <span class="nav-tool-items" *ngIf="!isConnected()">
+    <a mat-button routerLink="/" routerLinkActive="active">Log in</a>
+    <a mat-button mat-raised-button routerLink="register" routerLinkActive="active">Register</a>
+  </span>
+  <span class="nav-tool-items" *ngIf="isConnected()">
+    <span style="font-size: 14px; padding-right: 30px;">Welcome {{connectedUser()?.firstname}}
+      {{connectedUser()?.lastname}}</span>
+    <a *ngIf="isAdmin()" mat-button routerLink="admin" routerLinkActive="active">
+      <mat-icon aria-hidden="false" aria-label="Administration">dashboard</mat-icon>
+      Administration
+    </a>
+    <a routerLink="profile" mat-button routerLinkActive="active">
+      <mat-icon aria-hidden="false" aria-label="Administration">account_box</mat-icon>
+      Profile
+    </a>
+    <a mat-button (click)="logout()">
+      <mat-icon aria-hidden="false" aria-label="Administration">exit_to_app</mat-icon>
+      Log out
+    </a>
+  </span>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,40 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Keycloak Login</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="example-form" name="form" #ff="ngForm">
+                <table class="example-full-width" cellspacing="0">
+                    <tr>
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Username" [(ngModel)]="username" name="username" required
+                                    #tUsername="ngModel">
+                                <mat-error *ngIf="tUsername.touched && tUsername.invalid">{{'required'}}</mat-error>
+                                <mat-hint>by default: admin</mat-hint>
+                                <mat-icon matSuffix class="material-icons">perm_identity</mat-icon>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Password" [(ngModel)]="password" type="password"
+                                    name="password" required #tPassword="ngModel">
+                                <mat-error *ngIf="tPassword.touched && tPassword.invalid">{{'required'}}</mat-error>
+                                <mat-hint>by default: admin</mat-hint>
+                                <mat-icon matSuffix class="material-icons">lock_outline</mat-icon>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button (click)="login()" color="primary" [disabled]="ff.form.invalid">Login</button>
+        </mat-card-actions>
+    </mat-card>
+
+</div>

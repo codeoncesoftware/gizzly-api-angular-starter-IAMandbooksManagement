@@ -1,0 +1,37 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Books List</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+  
+<table class="table" *ngIf="booksList" style="margin-top: 60px">
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Pages Number</th>
+    </tr>
+    <tr *ngFor="let book of booksList">
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.pagesNumber }}</td>
+      <td>
+        <button mat-raised-button *ngIf="isAdmin" color="warn" (click)="onDelete(book._id)">
+          <i>Delete</i>
+        </button>
+      </td>
+      <td>
+        <button mat-raised-button *ngIf="isAdmin" color="accent" (click)="onEdit(book._id)">
+          <i>Edit</i>
+        </button>
+      </td>
+    </tr>
+  </table>
+  <button mat-raised-button *ngIf="isAdmin" color="primary" (click)="onAdd()">
+    <i>Add</i>
+  </button>
+
+  </mat-card-content>
+  </mat-card>
+  </div>

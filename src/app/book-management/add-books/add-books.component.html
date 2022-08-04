@@ -1,0 +1,26 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Add Book</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="booksFormGroup" (ngSubmit)="add()">
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Title" formControlName="title" id="title" required>
+                        <mat-icon matSuffix class="material-icons">perm_identity</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Author" formControlName="author" id="author" required>
+                        <mat-icon matSuffix class="material-icons">perm_identity</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="pagesNumber" formControlName="pagesNumber" id="pagesNumber" required>
+                        <mat-icon matSuffix class="material-icons">perm_identity</mat-icon>
+                    </mat-form-field>
+                    <button mat-raised-button type="submit" color="primary">Add</button>
+              </form>
+        </mat-card-content>
+    </mat-card>
+
+</div>
