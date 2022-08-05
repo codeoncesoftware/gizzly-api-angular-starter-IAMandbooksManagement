@@ -30,18 +30,23 @@ export class WelcomePageComponent implements OnInit {
 
   googleLogin() {
     window.location.href = this.authMSendpoint + '/authorization?identityProvider=google&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
+    + '&redirect_uri=' + window.location.href;
   }
   githubLogin() {
     window.location.href = this.authMSendpoint + '/authorization?identityProvider=github&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
+    + '&redirect_uri=' + window.location.href;
   }
   gitlabLogin() {
     window.location.href = this.authMSendpoint + '/authorization?identityProvider=gitlab&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
+    + '&redirect_uri=' + window.location.href;
   }
   linkedinLogin() {
     window.location.href = this.authMSendpoint + '/authorization?identityProvider=linekdin&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
+    + '&redirect_uri=' + window.location.href;
   }
   facebookLogin() {
     window.location.href = this.authMSendpoint + '/authorization?identityProvider=facebook&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
+    + '&redirect_uri=' + window.location.href;
   }
   keycloakLogin() {
     this.router.navigate(['/keycloakLogin'],

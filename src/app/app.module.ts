@@ -14,6 +14,8 @@ import { AuthModule } from './auth/auth.module';
 import { BookManagementComponent } from './book-management/book-management.component';
 import { AddBooksComponent } from './book-management/add-books/add-books.component';
 import { EditBooksComponent } from './book-management/edit-books/edit-books.component';
+import { ProfileComponent } from './auth/profile/profile.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -22,7 +24,9 @@ import { EditBooksComponent } from './book-management/edit-books/edit-books.comp
     AppComponent,
     BookManagementComponent,
     AddBooksComponent,
-    EditBooksComponent
+    EditBooksComponent,
+    ProfileComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

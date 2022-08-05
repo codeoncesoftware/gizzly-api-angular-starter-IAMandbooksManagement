@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '@app/auth/auth.service';
-import { environment } from '@env/environment';
+import { AuthService } from '../auth/auth.service';
+import { environment } from '../../environments/environment';
 import { includes } from 'lodash';
 import { Book } from './book';
 import { BooksManagementService } from './books.service';
