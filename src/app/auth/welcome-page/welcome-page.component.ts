@@ -41,7 +41,7 @@ export class WelcomePageComponent implements OnInit {
     + '&redirect_uri=' + window.location.href;
   }
   linkedinLogin() {
-    window.location.href = this.authMSendpoint + '/authorization?identityProvider=linekdin&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
+    window.location.href = this.authMSendpoint + '/authorization?identityProvider=linkedin&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
     + '&redirect_uri=' + window.location.href;
   }
   facebookLogin() {
