@@ -34,23 +34,28 @@ export class AuthService {
   }
 
   UserInfo() {
+    let queryParams = new HttpParams();
+    queryParams = queryParams.append("client_id",localStorage.getItem('client_id'));
+    queryParams = queryParams.append("client_secret",localStorage.getItem('client_secret'));
+    queryParams = queryParams.append("identityProvider",localStorage.getItem('identityProvider'));
+
       if(localStorage.getItem('identityProvider') === 'Keycloak') {
-        return this.http.get(this.authMSendpoint + '/userinfo?identityProvider=keycloak', {headers : this.headers});
+        return this.http.get(this.authMSendpoint + '/userinfo', {headers : this.headers, params: queryParams});
       }
       if(localStorage.getItem('identityProvider') === 'Google') {
-        return this.http.get(this.authMSendpoint + '/userinfo?identityProvider=google', {headers : this.headers});
+        return this.http.get(this.authMSendpoint + '/userinfo', {headers : this.headers, params: queryParams});
       }
       if(localStorage.getItem('identityProvider') === 'Github') {
-        return this.http.get(this.authMSendpoint + '/userinfo?identityProvider=github', {headers : this.headers});
+        return this.http.get(this.authMSendpoint + '/userinfo', {headers : this.headers, params: queryParams});
       }
       if(localStorage.getItem('identityProvider') === 'Gitlab') {
-        return this.http.get(this.authMSendpoint + '/userinfo?identityProvider=gitlab', {headers : this.headers});
+        return this.http.get(this.authMSendpoint + '/userinfo', {headers : this.headers, params: queryParams});
       }
       if(localStorage.getItem('identityProvider') === 'Linkedin') {
-        return this.http.get(this.authMSendpoint + '/userinfo?identityProvider=linkedin', {headers : this.headers});
+        return this.http.get(this.authMSendpoint + '/userinfo', {headers : this.headers, params: queryParams});
       }
       if(localStorage.getItem('identityProvider') === 'Facebook') {
-        return this.http.get(this.authMSendpoint + '/userinfo?identityProvider=facebook', {headers : this.headers});
+        return this.http.get(this.authMSendpoint + '/userinfo', {headers : this.headers, params: queryParams});
       }
   }
 

@@ -31,22 +31,32 @@ export class WelcomePageComponent implements OnInit {
   googleLogin() {
     window.location.href = this.authMSendpoint + '/authorization?identityProvider=google&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
     + '&redirect_uri=' + window.location.href;
+    localStorage.setItem('client_id', this.clientId);
+    localStorage.setItem('client_secret', this.clientSecret);
   }
   githubLogin() {
     window.location.href = this.authMSendpoint + '/authorization?identityProvider=github&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
     + '&redirect_uri=' + window.location.href;
+    localStorage.setItem('client_id', this.clientId);
+    localStorage.setItem('client_secret', this.clientSecret);
   }
   gitlabLogin() {
     window.location.href = this.authMSendpoint + '/authorization?identityProvider=gitlab&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
     + '&redirect_uri=' + window.location.href;
+    localStorage.setItem('client_id', this.clientId);
+    localStorage.setItem('client_secret', this.clientSecret);
   }
   linkedinLogin() {
     window.location.href = this.authMSendpoint + '/authorization?identityProvider=linkedin&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
     + '&redirect_uri=' + window.location.href;
+    localStorage.setItem('client_id', this.clientId);
+    localStorage.setItem('client_secret', this.clientSecret);
   }
   facebookLogin() {
     window.location.href = this.authMSendpoint + '/authorization?identityProvider=facebook&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
     + '&redirect_uri=' + window.location.href;
+    localStorage.setItem('client_id', this.clientId);
+    localStorage.setItem('client_secret', this.clientSecret);
   }
   keycloakLogin() {
     this.router.navigate(['/keycloakLogin'],

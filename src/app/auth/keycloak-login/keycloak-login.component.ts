@@ -27,6 +27,8 @@ export class KeycloakLoginComponent implements OnInit {
       if (res) {    
         localStorage.setItem('grizzly-token', 'Bearer ' + res['token']);
         localStorage.setItem('identityProvider','Keycloak');
+        localStorage.setItem('client_id', this.clientId);
+        localStorage.setItem('client_secret', this.clientSecret);    
         this.router.navigate(['books']);
       }
     },
