@@ -4,9 +4,12 @@
 
 export const environment = {
   production: false,
-  grizzlyUrlDefault: 'http://localhost:4900/runtime/62ec092a4a93be63aa106afc',
-  grizzlyUrlAuthMS: 'http://localhost:4900/runtime/62e2b66e285e4d1837b896bb',
-  grizzlyUrlBooksManagement: 'http://localhost:4900/runtime/62ea7a083eefec027cfcff85'
+  grizzlyUrlDefault:
+    "https://dwk5c1lsnem8l.cloudfront.net/runtime/62ee7b3958770f6fb9c9c6d3",
+  grizzlyUrlAuthMS:
+    "https://dwk5c1lsnem8l.cloudfront.net/runtime/62f270716b985d6b43f61a54",
+  grizzlyUrlBooksManagement:
+    "https://dwk5c1lsnem8l.cloudfront.net/runtime/62ee7b2558770f6fb9c9c6d0",
 };
 
 /*
