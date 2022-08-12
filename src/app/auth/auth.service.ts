@@ -21,12 +21,10 @@ export class AuthService {
   });
 
   endpoint = environment.grizzlyUrlDefault;
-  authMSendpoint = environment.grizzlyUrlAuthMS;
+  authMSendpoint = environment.grizzlyUrlIAMAPI;
   
-  keycloaksignIn(username: string,password: string, clientId: string, clientSecret:string) {
+  keycloaksignIn(username: string,password: string) {
     let queryParams = new HttpParams();
-    queryParams = queryParams.append("client_id",clientId);
-    queryParams = queryParams.append("client_secret",clientSecret);
     queryParams = queryParams.append("username",username);
     queryParams = queryParams.append("password",password);
     queryParams = queryParams.append("identityProvider","KEYCLOAK");
@@ -35,8 +33,6 @@ export class AuthService {
 
   UserInfo() {
     let queryParams = new HttpParams();
-    queryParams = queryParams.append("client_id",localStorage.getItem('client_id'));
-    queryParams = queryParams.append("client_secret",localStorage.getItem('client_secret'));
     queryParams = queryParams.append("identityProvider",localStorage.getItem('identityProvider'));
 
       if(localStorage.getItem('identityProvider') === 'Keycloak') {

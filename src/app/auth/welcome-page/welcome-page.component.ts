@@ -13,7 +13,7 @@ export class WelcomePageComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute, private authService: AuthService) { }
 
-  authMSendpoint = environment.grizzlyUrlAuthMS;
+  authMSendpoint = environment.grizzlyUrlIAMAPI;
   clientId: string;
   clientSecret: string;
 
@@ -29,38 +29,22 @@ export class WelcomePageComponent implements OnInit {
   }
 
   googleLogin() {
-    window.location.href = this.authMSendpoint + '/authorization?identityProvider=google&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
-    + '&redirect_uri=' + window.location.href;
-    localStorage.setItem('client_id', this.clientId);
-    localStorage.setItem('client_secret', this.clientSecret);
+    window.location.href = this.authMSendpoint + '/authorization?identityProvider=google'+ '&redirect_uri=' + window.location.href;
   }
   githubLogin() {
-    window.location.href = this.authMSendpoint + '/authorization?identityProvider=github&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
-    + '&redirect_uri=' + window.location.href;
-    localStorage.setItem('client_id', this.clientId);
-    localStorage.setItem('client_secret', this.clientSecret);
+    window.location.href = this.authMSendpoint + '/authorization?identityProvider=github' + '&redirect_uri=' + window.location.href;
   }
   gitlabLogin() {
-    window.location.href = this.authMSendpoint + '/authorization?identityProvider=gitlab&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
-    + '&redirect_uri=' + window.location.href;
-    localStorage.setItem('client_id', this.clientId);
-    localStorage.setItem('client_secret', this.clientSecret);
+    window.location.href = this.authMSendpoint + '/authorization?identityProvider=gitlab' + '&redirect_uri=' + window.location.href;
   }
   linkedinLogin() {
-    window.location.href = this.authMSendpoint + '/authorization?identityProvider=linkedin&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
-    + '&redirect_uri=' + window.location.href;
-    localStorage.setItem('client_id', this.clientId);
-    localStorage.setItem('client_secret', this.clientSecret);
+    window.location.href = this.authMSendpoint + '/authorization?identityProvider=linkedin' + '&redirect_uri=' + window.location.href;
   }
   facebookLogin() {
-    window.location.href = this.authMSendpoint + '/authorization?identityProvider=facebook&client_id=' + this.clientId + '&client_secret=' + this.clientSecret
-    + '&redirect_uri=' + window.location.href;
-    localStorage.setItem('client_id', this.clientId);
-    localStorage.setItem('client_secret', this.clientSecret);
+    window.location.href = this.authMSendpoint + '/authorization?identityProvider=facebook' + '&redirect_uri=' + window.location.href;
   }
   keycloakLogin() {
-    this.router.navigate(['/keycloakLogin'],
-    { queryParams: { client_id: this.clientId, 'client_secret': this.clientSecret } });
+    this.router.navigate(['/keycloakLogin']);
   }
   grizzlyLogin() {
     this.router.navigate(['/login']);
