@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
 
   user: any;
   username: string;
-
+  idpExists = false;
   constructor(private authService: AuthService, private router: Router) {
   }
 
@@ -25,6 +25,7 @@ export class ProfileComponent implements OnInit {
       });
     } else {
       this.authService.UserInfo().subscribe(res => {
+        this.idpExists = true;
         this.user = res;
       });
     }

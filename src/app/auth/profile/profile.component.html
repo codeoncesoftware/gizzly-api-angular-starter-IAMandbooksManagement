@@ -7,48 +7,102 @@
         <mat-card-content>
             <form class="example-form" name="form" #ff="ngForm">
                 <div class="example-container">
-                    <mat-form-field class="example-full-width">
+                    <mat-form-field *ngIf="user.firstname" class="example-full-width">
                         <input matInput placeholder="First Name" [(ngModel)]="user.firstname" name="firstname" required
                             #firstname="ngModel">
                         <mat-error *ngIf="firstname.touched && firstname.invalid">{{'required'}}</mat-error>
                         <mat-icon matSuffix class="material-icons">perm_identity</mat-icon>
                     </mat-form-field>
-                    <mat-form-field class="example-full-width">
+                    <mat-form-field *ngIf="user.lastname" class="example-full-width">
                         <input matInput placeholder="Last Name" [(ngModel)]="user.lastname" name="lastname" required
                             #lastname="ngModel">
                         <mat-error *ngIf="lastname.touched && lastname.invalid">{{'required'}}</mat-error>
                         <mat-icon matSuffix class="material-icons">perm_identity</mat-icon>
                     </mat-form-field>
-                    <mat-form-field class="example-full-width">
+                    <mat-form-field *ngIf="user.username" class="example-full-width">
                         <input matInput placeholder="Username" [(ngModel)]="user.username" name="username" required
                             #username="ngModel">
                         <mat-error *ngIf="username.touched && username.invalid">{{'required'}}</mat-error>
                         <mat-icon matSuffix class="material-icons">perm_identity</mat-icon>
                     </mat-form-field>
-                    <mat-form-field class="example-full-width">
+                    <mat-form-field *ngIf="user.email" class="example-full-width">
                         <input email type="email" matInput placeholder="Email" [(ngModel)]="user.email" name="email"
                             required #email="ngModel">
                         <mat-error *ngIf="email.touched && email.invalid">{{'required'}}</mat-error>
                         <mat-icon matSuffix class="material-icons">mail_outline</mat-icon>
                     </mat-form-field>
-                    <mat-form-field class="example-full-width">
+                    <mat-form-field *ngIf="user.password" class="example-full-width">
                         <input type="password" matInput placeholder="Password" [(ngModel)]="user.password"
                             type="password" name="password" required #password="ngModel">
                         <mat-error *ngIf="password.touched && password.invalid">{{'required'}}</mat-error>
                         <mat-icon matSuffix class="material-icons">lock_outline</mat-icon>
                     </mat-form-field>
 
-                    <mat-form-field class="example-full-width">
+                    <mat-form-field *ngIf="user.phone" class="example-full-width">
                         <input required matInput placeholder="Phone" [(ngModel)]="user.phone" name="phone"
                             #phone="ngModel">
                         <mat-error *ngIf="phone.touched && phone.invalid">{{'required'}}</mat-error>
                         <mat-icon matSuffix class="material-icons">phone</mat-icon>
                     </mat-form-field>
+                    <mat-form-field *ngIf="user.idp" class="example-full-width">
+                        <input matInput placeholder="IdentityProvider" [(ngModel)]="user.idp" name="idp"
+                            #idp="ngModel">
+                    </mat-form-field>
+                    <mat-form-field *ngIf="user.authentication_microservice" class="example-full-width">
+                        <input matInput placeholder="Runtime IAM API URL" [(ngModel)]="user.authentication_microservice" name="authentication_microservice"
+                            #authentication_microservice="ngModel">
+                    </mat-form-field>
+                    <mat-form-field *ngIf="user.given_name" class="example-full-width">
+                        <input  matInput placeholder="Firstname" [(ngModel)]="user.given_name" name="given_name"
+                            #idp="ngModel">
+                    </mat-form-field>
+                    <mat-form-field *ngIf="user.family_name" class="example-full-width">
+                        <input matInput placeholder="Lastname" [(ngModel)]="user.family_name" name="family_name"
+                            #idp="ngModel">
+                    </mat-form-field>
+
+                    <mat-form-field *ngIf="user.full_name" class="example-full-width">
+                        <input matInput placeholder="Name" [(ngModel)]="user.full_name" name="full_name"
+                            #idp="ngModel">
+                    </mat-form-field>
+                    <mat-form-field *ngIf="user.gender" class="example-full-width">
+                        <input matInput placeholder="Gender" [(ngModel)]="user.gender" name="gender"
+                            #idp="ngModel">
+                    </mat-form-field>
+                    <mat-form-field *ngIf="user.githubUrl" class="example-full-width">
+                        <input matInput placeholder="GithubUrl" [(ngModel)]="user.githubUrl" name="githubUrl"
+                            #idp="ngModel">
+                    </mat-form-field>
+                    <mat-form-field *ngIf="user.bio" class="example-full-width">
+                        <input matInput placeholder="Bio" [(ngModel)]="user.bio" name="bio"
+                            #idp="ngModel">
+                    </mat-form-field>
+                    <mat-form-field *ngIf="user.company" class="example-full-width">
+                        <input matInput placeholder="Company" [(ngModel)]="user.company" name="company"
+                            #idp="ngModel">
+                    </mat-form-field>
+                    <mat-form-field *ngIf="user.repos_url" class="example-full-width">
+                        <input matInput placeholder="repos url" [(ngModel)]="user.repos_url" name="repos_url"
+                            #idp="ngModel">
+                    </mat-form-field>
+                    <mat-form-field *ngIf="user.job_title" class="example-full-width">
+                        <input matInput placeholder="Job title" [(ngModel)]="user.job_title" name="job_title"
+                            #idp="ngModel">
+                    </mat-form-field>
+                    <mat-form-field *ngIf="user.web_url" class="example-full-width">
+                        <input matInput placeholder="Gitlab Url" [(ngModel)]="user.web_url" name="web_url"
+                            #idp="ngModel">
+                    </mat-form-field>
+                    <mat-form-field *ngIf="user.state" class="example-full-width">
+                        <input  matInput placeholder="State" [(ngModel)]="user.state" name="state"
+                            #idp="ngModel">
+                    </mat-form-field>                      
+
                 </div>
             </form>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button (click)="update()" color="primary" [disabled]="ff.form.invalid">Update</button>
+            <button  mat-raised-button (click)="update()" color="primary" [disabled]="ff.form.invalid || idpExists">Update</button>
         </mat-card-actions>
     </mat-card>
 
