@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  grizzlyUrlDefault: "https://dwk5c1lsnem8l.cloudfront.net/runtime/62f66f429cf0703178347a6a",
-  grizzlyUrlIAMAPI: "https://dwk5c1lsnem8l.cloudfront.net/runtime/62f6565f9cf0703178347a53",
-  grizzlyUrlBooksManagement: "https://dwk5c1lsnem8l.cloudfront.net/runtime/62f66d729cf0703178347a66",
+  grizzlyUrlDefault: "https://app.grizzly-api.com/runtime/642d5b58db16766ddd88657e",
+  grizzlyUrlIAMAPI: "https://app.grizzly-api.com/runtime/642d5e87db16766ddd886587",
+  grizzlyUrlBooksManagement: "https://app.grizzly-api.com/runtime/642d5eb2db16766ddd88658b",
 };
 
 /*
